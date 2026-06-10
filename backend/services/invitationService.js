@@ -1,48 +1,75 @@
-const path = require('path');
 const { v4: uuidv4 } = require('uuid');
-const { SafeJsonStore } = require('../utils/safeJsonStore');
+const { createClient } = require('@supabase/supabase-js');
+const { env } = require('../config/env');
 
-const store = new SafeJsonStore(path.resolve(__dirname, '../data/invitations.json'), { invitations: {} });
+let supabase = null;
+if (env.SUPABASE_URL && env.SUPABASE_KEY) {
+  supabase = createClient(env.SUPABASE_URL, env.SUPABASE_KEY);
+}
 
 async function createInvitation({ workspaceId, inviterId, inviterEmail, inviteeEmail, role, workspaceName }) {
-  return store.withLock(async () => {
-    const data = await store.read();
-    const id = uuidv4();
-    const invitation = {
-      id,
-      workspaceId,
-      inviterId,
-      inviterEmail,
-      inviteeEmail,
-      role,
-      workspaceName,
-      status: 'pending',
-      createdAt: new Date().toISOString()
-    };
-    data.invitations[id] = invitation;
-    await store.write(data);
+  const invitation = {
+    id: uuidv4(),
+    workspaceId,
+    inviterId,
+    inviterEmail,
+    inviteeEmail,
+    role,
+    workspaceName,
+    status: 'pending',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  };
+
+  if (!supabase) return invitation;
+
+  const { data, error } = await supabase
+    .from('invitations')
+    .insert([invitation])
+    .select()
+    .single();
+
+  if (error) {
+    console.error('Supabase create invitation error:', error);
     return invitation;
-  });
+  }
+  return data;
 }
 
 async function getInvitationsForEmail(email) {
-  const data = await store.read();
-  return Object.values(data.invitations || {}).filter(
-    inv => inv.inviteeEmail === email && inv.status === 'pending'
-  );
+  if (!supabase) return [];
+  
+  const { data, error } = await supabase
+    .from('invitations')
+    .select('*')
+    .eq('inviteeEmail', email)
+    .eq('status', 'pending');
+
+  if (error) {
+    console.error('Supabase get invitations error:', error);
+    return [];
+  }
+  return data || [];
 }
 
 async function updateInvitationStatus(id, status) {
-  return store.withLock(async () => {
-    const data = await store.read();
-    const invitation = data.invitations[id];
-    if (invitation) {
-      invitation.status = status;
-      invitation.updatedAt = new Date().toISOString();
-      await store.write(data);
-    }
-    return invitation;
-  });
+  if (!supabase) return null;
+
+  const { data, error } = await supabase
+    .from('invitations')
+    .update({ 
+      status, 
+      updatedAt: new Date().toISOString() 
+    })
+    .eq('id', id)
+    .select()
+    .single();
+
+  if (error) {
+    console.error('Supabase update invitation error:', error);
+    return null;
+  }
+  return data;
 }
 
 module.exports = { createInvitation, getInvitationsForEmail, updateInvitationStatus };
