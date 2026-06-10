@@ -16,7 +16,9 @@ const env = {
   EXECUTION_MEMORY_LIMIT: process.env.EXECUTION_MEMORY_LIMIT || '256m',
   EXECUTION_PIDS_LIMIT: Number(process.env.EXECUTION_PIDS_LIMIT || 64),
   EXECUTION_QUEUE_CONCURRENCY: Number(process.env.EXECUTION_QUEUE_CONCURRENCY || 2),
-  EXECUTION_TMP_ROOT: process.env.EXECUTION_TMP_ROOT || ''
+  EXECUTION_TMP_ROOT: process.env.EXECUTION_TMP_ROOT || '',
+  SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || '',
+  SUPABASE_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_KEY || ''
 };
 
 module.exports = { env };
