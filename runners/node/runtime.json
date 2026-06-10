@@ -1,0 +1,10 @@
+{
+  "language": ["javascript", "typescript"],
+  "image": "codepilot-runner-node:latest",
+  "entrypoint": "/runner/run.sh",
+  "resourceDefaults": {
+    "memory": "256m",
+    "cpus": "0.5",
+    "timeoutMs": 7000
+  }
+}

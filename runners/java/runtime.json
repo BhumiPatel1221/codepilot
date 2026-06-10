@@ -1,0 +1,10 @@
+{
+  "language": "java",
+  "image": "codepilot-runner-java:latest",
+  "entrypoint": "/runner/run.sh",
+  "resourceDefaults": {
+    "memory": "512m",
+    "cpus": "1",
+    "timeoutMs": 10000
+  }
+}

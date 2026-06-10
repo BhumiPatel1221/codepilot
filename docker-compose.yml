@@ -1,0 +1,82 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    container_name: codepilot-frontend
+    env_file:
+      - ./.env
+    environment:
+      NEXT_TELEMETRY_DISABLED: '1'
+      WATCH_IGNORED_PATHS: node_modules,.next,.git,backend,runners
+      WATCHPACK_POLLING: 'true'
+    ports:
+      - '4028:4028'
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    command: ['npm', 'run', 'dev', '--', '--hostname', '0.0.0.0']
+    restart: unless-stopped
+
+  frontend-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    container_name: codepilot-frontend-prod
+    env_file:
+      - ./.env
+    environment:
+      NEXT_TELEMETRY_DISABLED: '1'
+    ports:
+      - '4029:4028'
+    profiles: ['production']
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: codepilot-backend
+    env_file:
+      - ./backend/.env.example
+    ports:
+      - '5001:5001'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./backend/data:/app/data
+    restart: unless-stopped
+
+  runner-python:
+    image: codepilot-runner-python:latest
+    build:
+      context: ./runners/python
+      dockerfile: Dockerfile
+    profiles: ['runner-images']
+    command: ['sh', '-c', 'echo python runner image ready']
+
+  runner-node:
+    image: codepilot-runner-node:latest
+    build:
+      context: ./runners/node
+      dockerfile: Dockerfile
+    profiles: ['runner-images']
+    command: ['sh', '-c', 'echo node runner image ready']
+
+  runner-java:
+    image: codepilot-runner-java:latest
+    build:
+      context: ./runners/java
+      dockerfile: Dockerfile
+    profiles: ['runner-images']
+    command: ['sh', '-c', 'echo java runner image ready']
+
+  runner-cpp:
+    image: codepilot-runner-cpp:latest
+    build:
+      context: ./runners/cpp
+      dockerfile: Dockerfile
+    profiles: ['runner-images']
+    command: ['sh', '-c', 'echo cpp runner image ready']

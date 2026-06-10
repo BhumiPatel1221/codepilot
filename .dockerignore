@@ -1,0 +1,11 @@
+.git
+.gitignore
+node_modules
+**/node_modules
+.next
+coverage
+npm-debug.log
+.env.local
+backend
+runners
+backend/.env

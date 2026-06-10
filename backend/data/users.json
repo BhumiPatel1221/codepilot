@@ -1,0 +1,25 @@
+{
+  "users": {
+    "bhu@gmail.com": {
+      "id": "cc38be1d-d771-477d-b962-d9b14629a092",
+      "email": "bhu@gmail.com",
+      "full_name": "bhumi",
+      "avatar_url": "",
+      "updatedAt": "2026-06-10T05:44:45.439Z"
+    },
+    "user@gmail.com": {
+      "id": "448dd8b3-6e30-4b53-8e55-03ef57bc11fe",
+      "email": "user@gmail.com",
+      "full_name": "user1",
+      "avatar_url": "",
+      "updatedAt": "2026-06-10T05:31:40.486Z"
+    },
+    "pri@gmail.com": {
+      "id": "3b444385-6939-41a5-8d64-4a5a5f0adba2",
+      "email": "pri@gmail.com",
+      "full_name": "priya sharma",
+      "avatar_url": "",
+      "updatedAt": "2026-06-09T16:17:33.664Z"
+    }
+  }
+}

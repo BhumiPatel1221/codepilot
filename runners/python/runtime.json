@@ -1,0 +1,10 @@
+{
+  "language": "python",
+  "image": "codepilot-runner-python:latest",
+  "entrypoint": "/runner/run.sh",
+  "resourceDefaults": {
+    "memory": "256m",
+    "cpus": "0.5",
+    "timeoutMs": 7000
+  }
+}

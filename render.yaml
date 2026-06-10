@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: codepilot-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: BACKEND_PORT
+        value: 5001
+      - key: FRONTEND_ORIGIN
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: EXECUTION_TIMEOUT_MS
+        value: 7000
+      - key: EXECUTION_MIN_TIMEOUT_MS
+        value: 500
+      - key: EXECUTION_MAX_TIMEOUT_MS
+        value: 20000
+      - key: EXECUTION_MAX_CODE_SIZE
+        value: 200000
+      - key: EXECUTION_CPU_LIMIT
+        value: 0.5
+      - key: EXECUTION_MEMORY_LIMIT
+        value: 256m
+      - key: EXECUTION_PIDS_LIMIT
+        value: 64
+      - key: EXECUTION_QUEUE_CONCURRENCY
+        value: 2
+    rootDirectory: backend

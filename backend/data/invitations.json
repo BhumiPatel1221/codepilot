@@ -1,0 +1,124 @@
+{
+  "invitations": {
+    "c5f367cd-e0bf-41d4-82b7-71882a7e7fcb": {
+      "id": "c5f367cd-e0bf-41d4-82b7-71882a7e7fcb",
+      "workspaceId": "ws-a381abd1-bd93-4162-8af8-7207fecf7872",
+      "inviterId": "cc38be1d-d771-477d-b962-d9b14629a092",
+      "inviterEmail": "bhu@gmail.com",
+      "inviteeEmail": "user@gmail.com",
+      "role": "editor",
+      "workspaceName": "Workspace ws-a381a",
+      "status": "accepted",
+      "createdAt": "2026-06-08T18:17:37.379Z",
+      "updatedAt": "2026-06-08T18:17:53.566Z"
+    },
+    "342c4f63-f5dc-4f38-adab-1e46c6926df9": {
+      "id": "342c4f63-f5dc-4f38-adab-1e46c6926df9",
+      "workspaceId": "ws-a381abd1-bd93-4162-8af8-7207fecf7872",
+      "inviterId": "cc38be1d-d771-477d-b962-d9b14629a092",
+      "inviterEmail": "bhu@gmail.com",
+      "inviteeEmail": "user@gmail.com",
+      "role": "editor",
+      "workspaceName": "Workspace ws-a381a",
+      "status": "accepted",
+      "createdAt": "2026-06-09T11:40:49.887Z",
+      "updatedAt": "2026-06-09T11:40:59.986Z"
+    },
+    "4ec802b0-b577-4458-8e8f-616ad74d87bd": {
+      "id": "4ec802b0-b577-4458-8e8f-616ad74d87bd",
+      "workspaceId": "ws-a2a569f0-609a-4aee-8786-f86497b48294",
+      "inviterId": "cc38be1d-d771-477d-b962-d9b14629a092",
+      "inviterEmail": "bhu@gmail.com",
+      "inviteeEmail": "user@gmail.com",
+      "role": "editor",
+      "workspaceName": "Workspace ws-a2a56",
+      "status": "accepted",
+      "createdAt": "2026-06-09T11:50:30.446Z",
+      "updatedAt": "2026-06-09T11:50:39.834Z"
+    },
+    "780706b7-df78-4385-aa3d-650b06cec184": {
+      "id": "780706b7-df78-4385-aa3d-650b06cec184",
+      "workspaceId": "ws-aa77e2a7-28e8-471d-b5bc-bf930857f7fd",
+      "inviterId": "448dd8b3-6e30-4b53-8e55-03ef57bc11fe",
+      "inviterEmail": "user@gmail.com",
+      "inviteeEmail": "bhu@gmail.com",
+      "role": "editor",
+      "workspaceName": "Workspace ws-aa77e",
+      "status": "accepted",
+      "createdAt": "2026-06-09T16:23:02.278Z",
+      "updatedAt": "2026-06-09T16:23:18.337Z"
+    },
+    "06e2450d-7f6f-4e73-b200-c3fb41b9e247": {
+      "id": "06e2450d-7f6f-4e73-b200-c3fb41b9e247",
+      "workspaceId": "ws-a2a569f0-609a-4aee-8786-f86497b48294",
+      "inviterId": "cc38be1d-d771-477d-b962-d9b14629a092",
+      "inviterEmail": "bhu@gmail.com",
+      "inviteeEmail": "user@gmail.com",
+      "role": "editor",
+      "workspaceName": "Workspace ws-a2a56",
+      "status": "accepted",
+      "createdAt": "2026-06-09T16:28:12.910Z",
+      "updatedAt": "2026-06-09T16:28:20.218Z"
+    },
+    "3b48e217-2753-4ed0-929d-6c445e9f6f0e": {
+      "id": "3b48e217-2753-4ed0-929d-6c445e9f6f0e",
+      "workspaceId": "ws-aa77e2a7-28e8-471d-b5bc-bf930857f7fd",
+      "inviterId": "448dd8b3-6e30-4b53-8e55-03ef57bc11fe",
+      "inviterEmail": "user@gmail.com",
+      "inviteeEmail": "bhu@gmail.com",
+      "role": "editor",
+      "workspaceName": "Workspace ws-aa77e",
+      "status": "rejected",
+      "createdAt": "2026-06-10T05:08:23.896Z",
+      "updatedAt": "2026-06-10T05:24:55.667Z"
+    },
+    "9f66baf7-72d3-4cd8-825d-9711ae5b55ff": {
+      "id": "9f66baf7-72d3-4cd8-825d-9711ae5b55ff",
+      "workspaceId": "ws-aa77e2a7-28e8-471d-b5bc-bf930857f7fd",
+      "inviterId": "448dd8b3-6e30-4b53-8e55-03ef57bc11fe",
+      "inviterEmail": "user@gmail.com",
+      "inviteeEmail": "bhu@gmail.com",
+      "role": "editor",
+      "workspaceName": "Workspace ws-aa77e",
+      "status": "rejected",
+      "createdAt": "2026-06-10T05:24:39.859Z",
+      "updatedAt": "2026-06-10T05:25:00.181Z"
+    },
+    "7f44be3b-d288-4378-b5bb-3107ca38a03b": {
+      "id": "7f44be3b-d288-4378-b5bb-3107ca38a03b",
+      "workspaceId": "ws-a381abd1-bd93-4162-8af8-7207fecf7872",
+      "inviterId": "cc38be1d-d771-477d-b962-d9b14629a092",
+      "inviterEmail": "bhu@gmail.com",
+      "inviteeEmail": "user@gmail.com",
+      "role": "editor",
+      "workspaceName": "Workspace ws-a381a",
+      "status": "accepted",
+      "createdAt": "2026-06-10T05:27:25.082Z",
+      "updatedAt": "2026-06-10T05:27:33.244Z"
+    },
+    "fd2714a4-b793-4465-b276-373f90768f93": {
+      "id": "fd2714a4-b793-4465-b276-373f90768f93",
+      "workspaceId": "ws-a381abd1-bd93-4162-8af8-7207fecf7872",
+      "inviterId": "cc38be1d-d771-477d-b962-d9b14629a092",
+      "inviterEmail": "bhu@gmail.com",
+      "inviteeEmail": "user@gmail.com",
+      "role": "editor",
+      "workspaceName": "Workspace ws-a381a",
+      "status": "accepted",
+      "createdAt": "2026-06-10T05:28:49.678Z",
+      "updatedAt": "2026-06-10T05:28:58.354Z"
+    },
+    "ed4d3e09-93ee-4a60-9ce4-8dd20ed8b26e": {
+      "id": "ed4d3e09-93ee-4a60-9ce4-8dd20ed8b26e",
+      "workspaceId": "ws-f0768b58-b9c6-4e0e-aad7-ab8a28fc3b53",
+      "inviterId": "cc38be1d-d771-477d-b962-d9b14629a092",
+      "inviterEmail": "bhu@gmail.com",
+      "inviteeEmail": "user@gmail.com",
+      "role": "editor",
+      "workspaceName": "Workspace ws-f0768",
+      "status": "accepted",
+      "createdAt": "2026-06-10T05:30:31.923Z",
+      "updatedAt": "2026-06-10T05:30:42.153Z"
+    }
+  }
+}
