@@ -79,5 +79,3 @@ Create a `.env` file in the root directory and the `backend` directory based on 
 - `/runners` - Dockerfile definitions for isolated language-specific execution environments.
 - `/public` - Static assets.
 
-## 🤝 Contributing
-Contributions are welcome! Please feel free to submit a Pull Request.
